@@ -1,0 +1,45 @@
+﻿@model CreateRoleViewModel
+
+@{
+    ViewBag.Title = "Create New Role";
+}
+
+
+
+
+
+<div class="col-md-7">
+    <div class="card">
+
+
+       
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                    <h6 class="text-white text-capitalize ps-3" style="text-align:center;"> انشاء صلاحيه جديده</h6>
+                </div>
+            </div>
+            <div class="card-body">
+               
+                <form method="post" class="multisteps-form__form" style="height: 112px;">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <div class="col-12 col-sm-6">
+                        <div class="input-group input-group-dynamic">
+                            <label class="form-label" asp-for="RoleName">اسم صلاحيه</label>
+                            <input asp-for="RoleName" class="multisteps-form__input form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)">
+                        </div>
+                    </div>
+                    <br />
+                    <div class="text-center">
+                        <button style="width:auto" type="submit" class="btn btn-primary mt-4 w-20">انشاء</button>
+                        <button style="width:auto" type="submit" class="btn btn-secondary mt-4 w-20">تحديث</button>
+                    </div>
+                </form>
+
+            </div>
+        
+
+
+
+    </div>
+</div>

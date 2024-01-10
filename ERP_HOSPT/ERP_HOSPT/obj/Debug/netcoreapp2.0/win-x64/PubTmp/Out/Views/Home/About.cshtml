@@ -1,0 +1,75 @@
+﻿@model ERP_HOSPT.CollectionViewModels.CollectionOfAll
+@{
+    ViewData["Title"] = "About";
+}
+@using Microsoft.AspNetCore.Http;
+
+
+<div class="panel panel-container">
+    <div class="row">
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-teal panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-building color-blue" style="color:#4154f1"></em>
+                    <div class="large count">@Model.interviewss.Where(a => a.CompanyId==Context.Session.GetString("CompanyId") ).Count()</div>
+                    <div class="text-muted">المقابلات</div>
+                </div>
+            </div>
+        </div>
+        @*<div class="col-xs-6 col-md-3 col-lg-3 no-padding"> 
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="bi bi-building" style="color:#4154f1"></em>
+                    <div class="large count">@Model.Departss.Count()</div>
+                    <div class="text-muted">الاقسام</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-orange panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="fa fa-xl fa-user color-teal" style="color:#4154f1"></em>
+                    <div class="large">@Model.Patientss.Count()</div>
+                    <div class="text-muted">المرضئ</div>
+                </div>
+            </div>
+        </div>
+
+    </div>*@
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="row">
+
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-blue panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="bi bi-house-fill" style="color:#4154f1"></em>
+                    <div class="large count">@Model.Regionss.Count()</div>
+                    <div class="text-muted">المناطق</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-red panel-widget ">
+                <div class="row no-padding">
+                    <em class="fa fa-x3 fa-user-md color-red" style="color:#4154f1"></em>
+                    <div class="large count">@Model.Physicianss.Where(a => a.CompanyId==Context.Session.GetString("CompanyId")).Count()</div>
+                    <div class="text-muted">الدكاتره</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-6 col-md-3 col-lg-3 no-padding">
+            <div class="panel panel-teal panel-widget border-right">
+                <div class="row no-padding">
+                    <em class="bi bi-building" style="color:#4154f1"></em>
+                    <div class="large count">@Model.Cityss.Count()</div>
+                    <div class="text-muted">المدن</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

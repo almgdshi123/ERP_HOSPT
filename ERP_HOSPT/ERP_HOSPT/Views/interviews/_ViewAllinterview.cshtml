@@ -1,0 +1,317 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ERP_HOSPT.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+@model IEnumerable<ERP_HOSPT.Data.interview>
+
+
+
+
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+<div>
+    <div class="row">
+
+        <div class="col-xs-4 col-md-3 col-lg-3 ">
+            <h3>قائمه المقابلات</h3>
+        </div>
+
+        <div class="col-xs-6 col-md-3 col-lg-5">
+            <nav class="header-nav ms-auto">
+                <ul class="d-flex align-items-center">
+
+                    @if (SignInManager.IsSignedIn(User) && User.IsInRole("دكتور"))
+
+                    {
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+
+                                <em class="fa fa-xl fa-user-md color-orange">عدد المقابلات </em>
+
+                                <span class="badge bg-success badge-number">     @Model.Where(a => a.State == false).Count()</span>
+
+                            </a>
+
+
+                        </li>
+                    }
+
+
+                    </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table table-hover datatable ">
+                            <thead class="table-header">
+                                <tr>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.inter_type)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.inter_date)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.inter_notes)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.patient)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.physician)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.user)
+                                    </th>
+                                    <th></th>
+                                   
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    if (SignInManager.IsSignedIn(User) && User.IsInRole("دكتور"))
+                                    {
+
+                                        if (item.State == false && item.Stateinterview == false)
+                                        {
+                                            <tr class="table-danger" id="row_@item.interviewId">
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_notes)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.patient.Patientname)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.physician.phy_name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.user.UserName)
+                                                </td>
+                                                <!-- End Table with stripped rows -->
+
+
+                                                <td>
+                                                    <a asp-action="Edit1" asp-route-id="@item.interviewId" clas="fas fa-pencil-alt" class="btn btn-outline-primary">مقابلة >></a>
+
+
+
+
+                                                </td>
+
+
+                                            </tr>
+                                        }
+                                        else if (item.Stateinterview == true && item.State == false)
+                                        {
+                                            <tr style="background-color:lightblue" id="row_@item.interviewId">
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_notes)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.patient.Patientname)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.physician.phy_name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.user.UserName)
+                                                </td>
+
+                                                
+                                                    <td>
+                                                        <a asp-action="Edit1" asp-route-id="@item.interviewId" clas="fas fa-pencil-alt" class="btn btn-outline-info">متابعة المقابلة </a>
+                                                    </td>
+                                                
+
+                                               
+                                            </tr>
+                                        }
+                                        else if (item.State == true)
+                                        {
+                                            <tr id="row_@item.interviewId">
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_type)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_date)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.inter_notes)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.patient.Patientname)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.physician.phy_name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.user.UserName)
+                                                </td>
+                                                
+                                                    <td>
+                                                        <button asp-action="Edit1" asp-route-id="@item.interviewId" class="btn btn-outline-success"> تم المقابله</button>
+                                                    </td>
+                                                
+
+                                            </tr>
+                                        }
+                                    } else if(SignInManager.IsSignedIn(User) && User.IsInRole("المسجل عام"))
+                                    {
+                            <tr id="row_@item.interviewId">
+
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.inter_type)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.inter_date)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.inter_notes)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.patient.Patientname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.physician.phy_name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.user.UserName)
+                                </td>
+
+                                <td>
+                                    <div>
+                                        <a onclick="showInPopup('@Url.Action("Edit", "interviews", new { id = item.interviewId }, Context.Request.Scheme)','تعديل')" class="fas fa-pencil-alt" style="color:yellow"></a>
+
+                                        <a onclick="ConfirmDelete(@item.interviewId)" class="fas fa-trash" style="color:lightsalmon"></a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                                }
+
+                                }
+</tbody>
+                        </table>
+                      
+                        @*@if (SignInManager.IsSignedIn(User) && User.IsInRole("المسجل عام"))
+
+                        {
+                            <p>
+                                <a onclick="showInPopup('@Url.Action("Create", "interviews", null, Context.Request.Scheme)','اضافه مقابله')" class="btn btn-success text-white"><i class="fas fa-random"></i> اضافه مقابله جديد</a>
+
+                            </p>
+                        }*@
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">Vertically Centered</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>هل انت متاكد انك تريد حذف هاذا</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+
+</div>
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/interviews/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+            error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>

@@ -1,0 +1,91 @@
+﻿@model ERPDB.Models.Patient
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Patients/_ViewAllPatients.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Patientname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Patientname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaAddr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaAddr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaData)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaData)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaEmail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaEmail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaJob)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaJob)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaMobile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaMobile)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaNat)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaNat)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaNote)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaNote)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaPhone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaPhone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PaSex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PaSex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.City)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.City.CitName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Region.RegName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PatientId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

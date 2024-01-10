@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.Patient>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Interview = ViewBag.Interview;
+}
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAllPatients", Model)
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

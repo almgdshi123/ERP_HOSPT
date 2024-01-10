@@ -1,0 +1,111 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ERP_HOSPT.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@model IEnumerable<ERP_HOSPT.Data.R_analysis>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+<div class="pagetitle">
+    <h1>قائمه   الفحوصات</h1>
+
+</div><!-- End Page Title -->
+
+
+<div class="card">
+            <div class="card-body">
+
+              
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">رقم الفحص</th>
+                            <th scope="col">اسم المريض</th>
+                            <th scope="col">التحليل</th>
+                            <th scope="col">الدكتور</th>
+                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th scope="row">@item.R_analysisId</th>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.patient.Patientname)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.analysis.a_name)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.physician.phy_name)
+                                </td>
+                                <td class="icon">
+                                    <a onclick="showInPopup('@Url.Action("Edit","R_analysis",new {id=item.R_analysisId},Context.Request.Scheme)','تعديل')" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></a>
+
+                                </td>
+                            </tr>
+}
+
+                    </tbody>
+                </table>
+                <!-- End Primary Color Bordered Table -->
+            </div>
+</div>
+
+ 
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/R_analysis/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+           error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>

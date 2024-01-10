@@ -1,0 +1,96 @@
+﻿@model EditRoleViewModel
+
+@{
+    ViewBag.Title = "Edit Role";
+}
+    <div class="col-md-7">
+
+        <div class="card">
+
+
+
+
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div class="card">
+
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3" style="text-align:center;">تعديل الصلاحيه</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <form method="post" class="multisteps-form__form" style="height: 180px;">
+
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" asp-for="Id">رقم الصلاحيه </label>
+                                    <div class="input-group input-group-dynamic">
+
+                                        <input asp-for="Id" class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" disabled>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" asp-for="RoleName"> اسم الصلاحيه</label>
+                                    <div class="input-group input-group-dynamic">
+
+                                        <input asp-for="RoleName" class="multisteps-form__input form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)">
+                                    </div>
+                                </div>
+
+                                <div asp-validation-summary="All" class="text-danger"></div>
+
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <a asp-action="ListUsers" class="btn btn-secondary rounded-pill  col-3">الغاء الامر</a>
+
+                                        <button type="submit" class="btn btn-success rounded-pill col-3">تعديل</button>
+
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+                <br />
+                <br />
+                <div class="col-md-12">
+                    <div class="card" style="height: 200px;">
+
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3" style="text-align:center;"> الصلاحيه المستخدمه لهذا الحساب</h6>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            @if (Model.Users.Any())
+                            {
+                                foreach (var user in Model.Users)
+                                {
+                                    <h5 class="card-title">@user</h5>
+                                }
+                            }
+                            else
+                            {
+                                <h5 class="card-title">None at the moment</h5>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="EditUsersInRole" asp-controller="Adminstration"
+                               asp-route-roleId="@Model.Id" class="btn btn-primary col-3">اضافه صلاحيه</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+              

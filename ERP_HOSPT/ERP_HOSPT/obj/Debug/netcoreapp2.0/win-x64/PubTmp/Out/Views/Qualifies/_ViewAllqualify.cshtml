@@ -1,0 +1,150 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.Qualify>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+
+<div>
+    <div class="pagetitle">
+        <h1>قائمه  المؤهلات</h1>
+    </div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table table-hover datatable ">
+                            <thead>
+                                <tr class="table-header">
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.q_name)
+                                    </th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="row_@item.QualifyId">
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.q_name)
+                                        </td>
+
+                                        <td class="icon">
+
+                                            <a onclick="showInPopup('@Url.Action("Edit","Qualifies",new {id=item.QualifyId},Context.Request.Scheme)','تعديل')" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></a>
+
+
+                                            @*<a asp-action="Details" asp-route-id="@item.QualifyId" title="Remove my profile image"><i class="bi bi-eye-fill" style="color:green"></i></a>*@
+                                            <a onclick="ConfirmDelete(@item.QualifyId)" @*class="btn btn-danger btn-sm"*@ title="Remove my profile image"><i class="fas fa-trash-alt" style="color:red"></i></a>
+
+
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                        <p>
+
+                            <a onclick="showInPopup('@Url.Action("Create","Qualifies",null,Context.Request.Scheme)','اضافه ')" class="btn btn-success text-white"><i class="fas fa-random"></i> اضافه مؤهل جديد</a>
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">Vertically Centered</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>هل انت متاكد انك تريد حذف هاذا</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+
+
+    
+
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+
+</div>
+
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Qualifies/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+         error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>

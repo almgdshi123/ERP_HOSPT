@@ -1,0 +1,120 @@
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+C:\Users\issa\Source\Repos\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+D:\المقدشي\مشروع المقدشي\مشروع\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+D:\مشروع 1\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+D:\مشروع 1\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+D:\__\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+D:\__\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+D:\5\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+D:\5\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+H:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+H:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+G:\publish\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+G:\publish\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.deps.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.dll
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Debug\netcoreapp2.0\ERPDB.pdb
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.dll
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Debug\netcoreapp2.0\ERPDB.pdb

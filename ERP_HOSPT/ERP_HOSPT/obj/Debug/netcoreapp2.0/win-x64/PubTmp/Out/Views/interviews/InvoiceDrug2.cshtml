@@ -1,0 +1,41 @@
+﻿@using Microsoft.AspNetCore.Http;
+
+@{
+
+    Layout = null;
+}
+
+
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <h3 align="center" style="color:saddlebrown"  >   الادويه    </h3>
+
+        </div>
+
+        <table class="table table-bordered border-primary">
+
+            <thead>
+                <tr>
+                    <th scope="col" style="text-align:right;">  الجرعه</th>
+                    <th scope="col" style="text-align:right;"> اسم الدواء</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+
+                  
+                    <td  align="right">@Html.Raw(Model.Drug_detail)</td>
+                    <td  align="right">@Html.Raw(Model.Drug) </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+    </div>
+</div>

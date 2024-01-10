@@ -1,0 +1,78 @@
+﻿@model ERP_HOSPT.Data.Physician
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Physician</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_birth)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_birth)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_sex)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_sex)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_addr)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_addr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_phone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.phy_emil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.phy_emil)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Depart)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Depart.Departno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Qualify)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Qualify.QualifyId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Region.reg_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.city.cit_name)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PhysicianId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

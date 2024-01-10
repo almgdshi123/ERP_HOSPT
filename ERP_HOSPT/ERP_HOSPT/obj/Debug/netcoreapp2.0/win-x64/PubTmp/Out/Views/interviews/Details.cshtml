@@ -1,0 +1,184 @@
+﻿@model ERP_HOSPT.Data.interview
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>interview</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.inter_type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.inter_type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.inter_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.inter_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.inter_notes)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.inter_notes)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.patient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.patient.Patientname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.physician)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.physician.phy_addr)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user.Id)
+        </dd>
+    </dl>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Table Variants</h5>
+            <p>Use contextual classes <code>.table-primary .table-secondary .table-success .table-danger .table-warning .table-info .table-light .table-dark</code> to color tables, table rows or individual cells.</p>
+            <!-- Table Variants -->
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Class</th>
+                        <th scope="col">Heading</th>
+                        <th scope="col">Heading</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Default</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+
+                    <tr class="table-primary">
+                        <th scope="row">Primary</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <th scope="row">Secondary</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-success">
+                        <th scope="row">Success</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <th scope="row">Danger</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-warning">
+                        <th scope="row">Warning</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-info">
+                        <th scope="row">Info</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-light">
+                        <th scope="row">Light</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                    <tr class="table-dark">
+                        <th scope="row">Dark</th>
+                        <td>Cell</td>
+                        <td>Cell</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End Table Variants -->
+
+        </div>
+    </div>
+
+</div>
+
+<div class="col-lg-6">
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Table with stripped rows</h5>
+
+            <!-- Table with stripped rows -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Start Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Brandon Jacob</td>
+                        <td>Designer</td>
+                        <td>28</td>
+                        <td>2016-05-25</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Bridie Kessler</td>
+                        <td>Developer</td>
+                        <td>35</td>
+                        <td>2014-12-05</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Ashleigh Langosh</td>
+                        <td>Finance</td>
+                        <td>45</td>
+                        <td>2011-08-12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Angus Grady</td>
+                        <td>HR</td>
+                        <td>34</td>
+                        <td>2012-06-11</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Raheem Lehner</td>
+                        <td>Dynamic Division Officer</td>
+                        <td>47</td>
+                        <td>2011-04-19</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+
+        </div>
+    </div>
+
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.interviewId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

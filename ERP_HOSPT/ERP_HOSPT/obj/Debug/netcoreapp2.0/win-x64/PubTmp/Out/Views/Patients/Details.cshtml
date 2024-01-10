@@ -1,0 +1,320 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.Patient>
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+@if (SignInManager.IsSignedIn(User) && User.IsInRole("المسجل عام"))
+{
+    <!-- End Page Title -->
+    <div>
+        <section class="section">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <table class="table table-hover datatable ">
+
+                                <thead>
+                                    <tr class="table-header">
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.Patientname)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_nat)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_addr)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_job)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_data)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_sex)
+                                        </th>
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_mobile)
+                                        </th>
+                                        @*<th scope="col">
+                                                @Html.DisplayNameFor(model => model.pa_phone)
+                                            </th>*@
+                                        @*<th scope="col">
+                                                @Html.DisplayNameFor(model => model.pa_email)
+                                            </th>*@
+                                        <th scope="col" style="text-align:right;">
+                                            @Html.DisplayNameFor(model => model.pa_note)
+                                        </th>
+                                        @*<th scope="col">
+                                                @Html.DisplayNameFor(model => model.Region)
+                                            </th>
+                                            <th scope="col">
+                                                @Html.DisplayNameFor(model => model.city)
+                                            </th>*@
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr id="row_@item.PatientId">
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Patientname)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_nat)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_addr)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_job)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_data)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_sex)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_mobile)
+                                            </td>
+                                            @*<td>
+                                                    @Html.DisplayFor(modelItem => item.pa_phone)
+                                                </td>*@
+                                            @*<td>
+                                                    @Html.DisplayFor(modelItem => item.pa_email)
+                                                </td>*@
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.pa_note)
+                                            </td>
+                                            @*<td>
+                                                    @Html.DisplayFor(modelItem => item.Region.reg_name)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.city.cit_name)
+                                                </td>*@
+
+                                            <td>
+                                                <div>
+                                                    <a onclick="showInPopup('@Url.Action("CreateInterview", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','اظافة مقابلة')" class=" btn btn-outline-warning">مقابلة >></a>
+
+                                                </div>
+
+
+                                            </td>
+
+                                            <td>
+                                                <div>
+                                                    <a onclick="showInPopup('@Url.Action("Edit", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','تعديل')" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></a>
+
+                                                    <a onclick="ConfirmDelete(@item.PatientId)" title="هل تريد الحذف"><i class="fas fa-trash-alt" style="color:red"></i></a>
+
+
+
+                                                </div>
+                                            </td>
+
+                                        </tr>
+
+                                    }
+
+
+                                </tbody>
+
+                            </table>
+
+                            <!-- End Table with stripped rows -->
+                            <p>
+
+                                <a onclick="showInPopup('@Url.Action("Create", "Patients", null, Context.Request.Scheme)','اضافه مريض جدبد')" class="btn btn-success text-white" title="اضافه تحليل"><i class="fas fa-plus"></i> اضافه مريض جديد</a>
+
+                            </p>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="myModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" dir="rtl">
+                    <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" dir="rtl">حذف</h5>
+                    </div>
+                    <div class="modal-body">
+                        <h4>هل  تريد حذف هاذا</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                        <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Vertically centered Modal-->
+
+
+        <input type="hidden" id="hiddenEmployeeId" />
+
+    </div>}
+
+@if (SignInManager.IsSignedIn(User) && User.IsInRole("مدير"))
+
+
+
+{<div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Table</h4>
+                <p class="card-description">
+                    Add class <code>.table-striped</code>
+                </p>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.Patientname)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_nat)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_addr)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_job)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_data)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_sex)
+                                </th>
+                                <th scope="col" style="text-align:right;">
+                                    @Html.DisplayNameFor(model => model.pa_mobile)
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr id="row_@item.PatientId">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Patientname)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_nat)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_addr)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_job)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_data)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_sex)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_mobile)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.pa_note)
+                                    </td>
+
+
+                                    <td>
+                                        <div>
+                                            <a onclick="showInPopup('@Url.Action("CreateInterview", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','اظافة مقابلة')" class=" btn btn-outline-warning">عرض السحلات >></a>
+
+                                        </div>
+
+
+                                    </td>
+
+                                    <td>
+                                        <div>
+                                            <a onclick="showInPopup('@Url.Action("Edit", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','تعديل')" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></a>
+
+                                            <a onclick="ConfirmDelete(@item.PatientId)" title="هل تريد الحذف"><i class="fas fa-trash-alt" style="color:red"></i></a>
+
+
+
+                                        </div>
+                                    </td>
+
+                                </tr>
+
+                            }
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+}
+
+
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Patients/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+
+        })
+
+    }
+
+
+</script>

@@ -1,0 +1,187 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.Physician>
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+<div class="pagetitle">
+    <h1>قائمه الطبيب</h1>
+</div>
+<div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table table-hover datatable ">
+
+                            <thead>
+                                <tr class="table-header">
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.phy_name)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.phy_birth)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.phy_sex)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.phy_addr)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.phy_phone)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.phy_emil)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Depart)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Qualify)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.Region)
+                                    </th>
+                                    <th scope="col">
+                                        @Html.DisplayNameFor(model => model.city)
+                                    </th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr id="row_@item.PhysicianId">
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_birth)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_sex)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_addr)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_phone)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.phy_emil)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Depart.dept_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Qualify.q_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Region.reg_name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.city.cit_name)
+                                    </td>
+
+                                    <td>
+                                        <div>
+                                            <a onclick="showInPopup('@Url.Action("Edit","Physicians",new {id=item.PhysicianId},Context.Request.Scheme)','تعديل')" class="fas fa-pencil-alt" style="color:yellow"></a>
+                                            <a onclick="ConfirmDelete(@item.PhysicianId)" class="fas fa-trash-alt" style="color:red"></a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                        <p>
+
+                            <a onclick="showInPopup('@Url.Action("Create","Physicians",null,Context.Request.Scheme)','اضافه الطبيب')" class="btn btn-success text-white"><i class="fas fa-random"></i> اضافه الطبيب جديد</a>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">حذف</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>هل تريد حذف هاذا</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+</div>
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Physicians/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire(' تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+            error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>

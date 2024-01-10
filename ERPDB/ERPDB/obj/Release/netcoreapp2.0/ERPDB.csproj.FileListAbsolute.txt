@@ -1,0 +1,30 @@
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\appsettings.Development.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\appsettings.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\bundleconfig.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\Properties\launchSettings.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.deps.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.runtimeconfig.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.dll
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.pdb
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.dll
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.pdb
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\appsettings.Development.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\bundleconfig.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\appsettings.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.deps.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.runtimeconfig.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.runtimeconfig.dev.json
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.dll
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\bin\Release\netcoreapp2.0\ERPDB.pdb
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.csprojAssemblyReference.cache
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.AssemblyInfoInputs.cache
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.AssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.dll
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\ERPDB.pdb

@@ -1,0 +1,146 @@
+﻿@model ERP_HOSPT.Data.Patient
+
+@{ Layout = null;
+}
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit" asp-route-id="@Model.PatientId" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatientId" />
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label asp-for="Patientname" class="control-label"></label>
+                        <input asp-for="Patientname" class="form-control" />
+                        <span asp-validation-for="Patientname" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pa_nat" class="control-label"></label>
+                        <input asp-for="pa_nat" class="form-control" />
+                        <span asp-validation-for="pa_nat" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pa_addr" class="control-label"></label>
+                        <input asp-for="pa_addr" class="form-control" />
+                        <span asp-validation-for="pa_addr" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pa_job" class="control-label"></label>
+                        <input asp-for="pa_job" class="form-control" />
+                        <span asp-validation-for="pa_job" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+
+
+
+                    <label asp-for="pa_sex" class="control-label"></label>
+                    <select asp-for="pa_sex" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+
+                        <option value="ذكر">ذكر</option>
+                        <option value="انثئ">انثئ</option>
+                        <option value="شي اخر">شي اخر</option>
+                    </select>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="pa_data" class="control-label"></label>
+                <input asp-for="pa_data" class="form-control" />
+                <span asp-validation-for="pa_data" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pa_mobile" class="control-label"></label>
+                        <input type="number" asp-for="pa_mobile" class="form-control" />
+                        <span asp-validation-for="pa_mobile" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <label asp-for="pa_phone" class="control-label"></label>
+                        <input asp-for="pa_phone" class="form-control" />
+                        <span asp-validation-for="pa_phone" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="pa_email" class="control-label"></label>
+                        <input asp-for="pa_email" class="form-control" />
+                        <span asp-validation-for="pa_email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+
+                    <div class="form-group">
+                        <label asp-for="pa_note" class="control-label"></label>
+                        <input asp-for="pa_note" class="form-control" />
+                        <span asp-validation-for="pa_note" class="text-danger"></span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="cityId" class="control-label"></label>
+                        <select asp-for="cityId" class="form-select" aria-label="Default select example" asp-items="ViewBag.cityId"></select>
+                        <span asp-validation-for="cityId" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="RegionId" class="control-label"></label>
+                        <select asp-for="RegionId" class="form-select" aria-label="Default select example" asp-items="ViewBag.RegionId"></select>
+
+                    </div>
+                </div>
+
+            </div>
+            <br />
+            <div class="text-center">
+
+
+                <button type="submit" class="btn btn-primary col-3"> <i class="bi bi-save"></i> حفط</button>
+
+                <button type="reset" class="btn btn-primary col-3"> <i class="bi bi-arrow-repeat me-1"></i> تحديث</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

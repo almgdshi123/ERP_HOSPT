@@ -1,0 +1,36 @@
+﻿@model ERP_HOSPT.Data.Region
+
+@{
+   Layout = null;
+}
+
+
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="Edit" asp-route-id="@Model.RegionId" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="RegionId" />
+            <div class="form-group">
+                <label asp-for="reg_name" class="control-label"></label>
+                <input asp-for="reg_name" class="form-control" />
+                <span asp-validation-for="reg_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cityId" class="control-label"></label>
+                <select asp-for="cityId" class="form-select" asp-items="ViewBag.cityId"></select>
+            </div>
+            @*<div class="form-group" >
+            <input type="submit" value="Create" class="btn btn-default" />
+        </div>*@
+            <br />
+            <div class="text-center">
+
+
+                <button type="submit" class="btn btn-primary col-3"> <i class="bi bi-save"></i> حفظ</button>
+
+                <button type="reset" class="btn btn-primary col-3"> <i class="bi bi-arrow-repeat me-1"></i> تحديث</button>
+            </div>
+        </form>
+    </div>
+</div>

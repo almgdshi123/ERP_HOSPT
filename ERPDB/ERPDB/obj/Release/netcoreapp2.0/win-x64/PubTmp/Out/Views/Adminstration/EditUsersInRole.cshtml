@@ -1,0 +1,39 @@
+﻿@model List<UserRoleViewModel>
+
+@{
+    var roleId = ViewBag.roleId;
+}
+<div class="col-md-7">
+    <div class="card">
+        <form method="post">
+            <div class="card">
+
+
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3" style="text-align:center;">جميع الحسابات</h6>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        <div class="form-check m-1">
+                            <input type="hidden" asp-for="@Model[i].UserId" />
+                            <input type="hidden" asp-for="@Model[i].UserName" />
+                            <input asp-for="@Model[i].IsSelected" class="form-check-input" />
+                            <label class="form-check-label" asp-for="@Model[i].IsSelected">
+                                @Model[i].UserName
+                            </label>
+                        </div>
+                    }
+                </div>
+                <div class="card-footer">
+                    <a asp-action="EditRole" asp-route-id="@roleId"
+                       class="btn btn-secondary rounded-pill col-3">الغاء الامر</a>
+                    <input type="submit" value="تعديل" class="btn btn-success rounded-pill col-3" />
+
+                </div>
+            </div>
+        </form>
+</div>
+</div>

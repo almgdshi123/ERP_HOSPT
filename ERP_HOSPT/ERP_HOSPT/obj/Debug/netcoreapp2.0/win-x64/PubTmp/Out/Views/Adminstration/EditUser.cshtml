@@ -1,0 +1,123 @@
+﻿@model EditUserViewModel
+
+@{
+    ViewBag.Title = "Edit User";
+}
+
+
+
+<div class="col-md-8">
+    <div class="card" style="margin:0px 51px 0px 0px">
+
+        <div class="card-body">
+            <div class="card-header" style="background-color:#4154f1;color:white;">
+                <h3 style="text-align:center;
+color:white;">
+                    تعديل حساب المستخدم
+                </h3>
+            </div>
+          
+            <form method="post">
+                <div class="form-group row ">
+                    <label asp-for="Id"  col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Id" disabled class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="Email"  col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="Email" class="form-control">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="UserName"  col-form-label"></label>
+                    <div class="col-sm-10">
+                        <input asp-for="UserName" class="form-control">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="text-center">  
+                   
+                        <a asp-action="ListUsers" class="btn btn-danger  col-2">الغاء الامر</a>
+                        <button type="submit" class="btn btn-primary   col-2">تعديل</button>
+
+
+                   
+                </div>
+                <br />
+
+
+
+
+                @*<div class="card mt-3" style="width:80%;">
+                        <div class="card-header" style="background-color:#4154f1;color:white;">
+                            <h3>مطليبات المسخدم</h3>
+                        </div>
+                        <div class="card-body" >
+                            @if (Model.Claims.Any())
+                            {
+                                foreach (var claim in Model.Claims)
+                                {
+                                    <h5 class="card-title">@claim</h5>
+                                }
+                            }
+                            else
+                            {
+                                <h5 class="card-title">None at the moment</h5>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="ManageUserClaims" asp-route-userId="@Model.Id"
+                               style="width:auto" class="btn btn-primary rounded-pill">
+                                Manage Claims
+                            </a>
+                        </div>
+                    </div>*@
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<br />
+<br />
+
+<div class="col-md-8">
+    <div class="card" style="margin:0px 51px 0px 0px">
+
+        <div class="card-body">
+            <div class="card-header" style="background-color:#4154f1;color:white;">
+               
+                    <h3 style="text-align:center;
+color:white;">
+                        الصلاحيات المستخدمه لهذا الحساب
+                    </h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.Roles.Any())
+                    {
+                        foreach (var role in Model.Roles)
+                        {
+                            <h5 class="card-title">@role</h5>
+                        }
+                    }
+                    else
+                    {
+                        <h5 class="card-title">None at the moment</h5>
+                    }
+                </div>
+                <div  class="text-center">
+                    <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id" class="btn btn-primary  col-3">
+                        اداره واضافه الصلاحيات
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>

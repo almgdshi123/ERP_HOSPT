@@ -1,0 +1,96 @@
+﻿@using System.Collections.Generic
+@using System.Linq
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Http.Authentication
+@model LoginViewModel
+@inject SignInManager<ApplicationUser> SignInManager
+
+@{
+    ViewData["Title"] = "Log in";
+    
+    Layout = "~/Views/Shared/_Layoutlogin.cshtml";
+}
+
+
+
+<div class="container">
+
+    <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7 d-flex flex-column align-items-center justify-content-center">
+
+
+
+                    <div class="card mb-5 " dir="rtl">
+
+                        <div class="card-body">
+
+                            <div class="d-flex justify-content-center py-4">
+                                <a href="Log in.html" class="logo d-flex align-items-center w-auto">
+                                    <img src="assets/img/logo.png" alt="">
+                                    <span class="d-none d-lg-block" style="
+                                     color:#4154f1;">تسجيل الدخول الئ النظام</span>
+                                </a>
+                            </div><!-- End Logo -->
+                            <div class="pt-4 pb-2">
+                                <h5 class="card-title text-center pb-0 fs-4"> ادخل اسم المستخدم و كلمه المرور للدخول</h5>
+                            </div>
+                            <section>
+                                <form asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="needs-validation" novalidate>
+                                    @*<h4>Use a local account to log in.</h4>*@
+                                    <hr />
+                                    <div asp-validation-summary="All" class="text-danger"></div>
+                                    <div class="form-group">
+                                        <label asp-for="Email"></label>
+                                        <input asp-for="Email" class="form-control" />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label asp-for="Password"></label>
+                                        <input asp-for="Password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <br />
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <label asp-for="RememberMe" class="form-check-label">
+                                                <input asp-for="RememberMe" class="form-check-input" />
+                                                @Html.DisplayNameFor(m => m.RememberMe)
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" type="submit">تسجيل الدخول</button>
+                                    </div>
+                                    <br />
+                                    <div class="col-12">
+
+                                        <p>
+                                            <a asp-action="ForgotPassword">هل نسيت كلمة المرور؟</a>
+                                        </p>
+
+                                    </div>
+
+                                </form>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                   
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

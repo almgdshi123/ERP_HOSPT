@@ -1,0 +1,77 @@
+﻿@model ERP_HOSPT.Data.interview
+
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" asp-route-id="@Model.PatientId" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+
+
+                <label asp-for="inter_type" class="control-label"></label>
+                <select asp-for="inter_type" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+
+                    <option value="ذكر">عاديه</option>
+                    <option value="انثئ">خطيره</option>
+                    <option value="شي اخر">مستعجل</option>
+                </select>
+            </div>
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="inter_date" class="control-label"></label>
+
+                        <input type="date" asp-for="inter_date" class="form-control">
+                        <span asp-validation-for="inter_date" class="text-danger"></span>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="inter_notes" class="control-label"></label>
+                        <input asp-for="inter_notes" class="form-control" />
+                        <span asp-validation-for="inter_notes" class="text-danger"></span>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="PatientId" class="control-label"></label>
+                        <select asp-for="PatientId" class="form-select" asp-items="ViewBag.PatientId"></select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="PhysicianId" class="control-label"></label>
+                        <select asp-for="PhysicianId" class="form-select" asp-items="ViewBag.PhysicianId"></select>
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <div class="text-center">
+
+
+                <button type="submit" class="btn btn-primary col-3"> <i class="bi bi-send"></i> ارسال</button>
+
+                <button type="reset" class="btn btn-primary col-3"> <i class="bi bi-arrow-repeat me-1"></i> تحديث</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

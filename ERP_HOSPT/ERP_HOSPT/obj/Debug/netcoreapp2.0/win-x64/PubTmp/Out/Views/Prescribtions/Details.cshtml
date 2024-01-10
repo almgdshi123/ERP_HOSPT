@@ -1,0 +1,80 @@
+﻿@model ERP_HOSPT.Data.Prescribtion
+
+@{
+    ViewData["Title"] = "Details";
+}
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table table-borderless" >
+
+                            <thead>
+
+                                <tr class="table-header">
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.Pre_date)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.Dig)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.pre_detail)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.drug)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.patient)
+                                    </th>
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.physician)
+                                    </th>
+                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                              
+                                <tr>
+                                    <td>
+
+                                        @Html.DisplayFor(model => model.Pre_date)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.Dig)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.pre_detail)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(model => model.drug.d_name)
+                                    </td>
+
+                                    <td>
+                                        @Html.DisplayFor(model => model.patient.Patientname)
+                                    </td>
+
+
+                                    <td>
+                                        @Html.DisplayFor(model => model.physician.phy_name)
+                                    </td>
+
+
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        <p>
+
+                            <button type="submit" value="Create" class="btn btn-primary">ظباعه</button>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

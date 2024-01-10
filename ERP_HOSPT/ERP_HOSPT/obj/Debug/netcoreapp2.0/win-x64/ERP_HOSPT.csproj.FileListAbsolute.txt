@@ -1,0 +1,35 @@
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\appsettings.Development.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\appsettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\bundleconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\key.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\Properties\launchSettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.deps.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\appsettings.Development.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\bundleconfig.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\key.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\Properties\launchSettings.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\appsettings.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\hostpolicy.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\hostfxr.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.exe
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.deps.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\win-x64\ERP_HOSPT.pdb

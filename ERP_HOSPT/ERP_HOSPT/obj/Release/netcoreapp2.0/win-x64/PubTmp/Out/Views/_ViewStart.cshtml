@@ -1,0 +1,14 @@
+﻿@{
+    @inject SignInManager<ApplicationUser> SignInManager
+    @inject UserManager<ApplicationUser> UserManager
+
+    @if (SignInManager.IsSignedIn(User) && User.IsInRole("مدير"))
+    {
+                Layout = "_LayoutRecord";
+
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}

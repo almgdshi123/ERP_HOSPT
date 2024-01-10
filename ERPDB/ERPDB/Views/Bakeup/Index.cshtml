@@ -1,0 +1,193 @@
+﻿<style>
+    .table-header {
+        background-color: #f8f9fa;
+        color: white;
+    }
+</style>
+
+
+@{ 
+    int i = 0;
+}
+<div class="col-md-8">
+    <div class="card">
+
+
+
+        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                <h6 class="text-white text-capitalize ps-3" style="text-align:center;"> اضافة نسخة احتياطية</h6>
+            </div>
+        </div>
+        <div class="card-body">
+            <div class="col-md-12">
+
+                <div class="card">
+
+                    <form asp-controller="Bakeup" asp-action="backup" method="post">
+
+                        <div class="card-body card-block">
+
+                            <div class="form-inline">
+                                <div class="row">
+                                    <div class="col-12 col-sm-6">
+                                        <div class="input-group input-group-dynamic">
+                                            <label for="exampleInputName2" class="form-label">الاسم</label>
+                                            <input type="text" name="name" required="" class="multisteps-form__input form-control" onfocus="focused(this)" onfocusout="defocused(this)">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+                        <div class=" text-center">
+                            <button type="submit" class="btn btn-primary  active col-3">
+                                <i class="fa fa-send"></i> ارسال
+                            </button>
+                            <button type="reset" class="btn btn-secondary   active col-3">
+                                <i class="fa fa-refresh fa-1x"></i>   تحديث
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+            <br />
+            <br />
+
+
+
+
+
+
+
+
+            <div class="col-md-12">
+
+                <div class="container-fluid py-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card my-4">
+                                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                        <h6 class="text-white text-capitalize ps-3" style="text-align:center;">عرض النسخ الاحتياطيه</h6>
+                                    </div>
+                                </div>
+                                <div class="card-body px-0 pb-2">
+                                    <div class="table-responsive p-0">
+                                        <table class="table align-items-center mb-0">
+                                            <thead class="table-header">
+                                                <tr>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" style="text-align:right;">    الاسم</th>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" style="text-align:right;">حذف النسخه الاحتياطيه</th>
+                                                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2" style="text-align:right;"> استعاده نسخه الاحتياطيه </th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (string backup in ViewBag.backup)
+                                                {
+                                                    <tr>
+                                                        @*<td>
+                                                                <label class="au-checkbox">
+                                                                    <input type="checkbox">
+                                                                    <span class="au-checkmark"></span>
+                                                                </label>
+                                                            </td>*@
+                                                        <td>
+                                                            <div class="table-data__info">
+                                                                @backup
+                                                            </div>
+                                                        </td>
+
+                                                        <td>
+                                                            <div class="table-data-feature">
+
+
+                                                                <button onclick="ConfirmDelete(@i)" title="@backup هل تريد الحذف" class="fas fa-trash-alt" style="color:red"></button>
+
+
+
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="table-data-feature">
+
+
+                                                                <button onclick="ConfirmRestore(@i)" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></button>
+
+                                                            </div>
+                                                        </td>
+                                                        @{ i++;}
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- End Vertically centered Modal-->
+
+</div>
+
+<script>
+
+    var ConfirmDelete = function (e) {
+
+        if (confirm(" هل ترغب في حذف")) {
+            $.ajax({
+                type: 'GET',
+                url: "/Bakeup/backupDelete",
+                data: { id : e }
+
+            })
+        }
+
+    }
+    
+
+    
+
+
+    var ConfirmRestore = function (e) {
+
+           if (confirm(" هل ترغب في الاستعادة")) {
+            $.ajax({
+                type: 'GET',
+                url: "/Bakeup/restore",
+                data: { id : e }
+
+            })
+        }
+
+    }
+
+
+    
+</script>

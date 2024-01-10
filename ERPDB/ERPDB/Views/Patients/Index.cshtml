@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ERPDB.Models.Patient>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAllPatients", Model)
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

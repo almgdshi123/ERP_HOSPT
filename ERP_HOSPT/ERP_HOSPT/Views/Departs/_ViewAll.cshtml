@@ -1,0 +1,141 @@
+﻿
+@model IEnumerable<ERP_HOSPT.Data.Depart>
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+<div class="pagetitle">
+    <h1>قائمه الاقسام</h1>
+
+</div><!-- End Page Title -->
+<div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-hover datatable ">
+
+                            <thead>
+                                <tr class="table-header">
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.dept_name)
+                                    </th>
+                                    <th></th>
+                                    <th></th>
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="row_@item.Departno">
+
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.dept_name)
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <a onclick="showInPopup('@Url.Action("Edit","Departs",new {id=item.Departno},Context.Request.Scheme)','تعديل')" title="Remove my profile image"><i class="fas fa-pencil-alt" style="color:yellow"></i></a>
+                                                <a onclick="ConfirmDelete(@item.Departno)" class="fas fa-trash-alt" style="color:red"></a>
+
+
+                                                @*<a asp-action="Details" asp-route-id="@item.Departno" ><i class="bi bi-eye-fill" style="color:green"></i></a>*@
+
+
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                      
+                        <p>
+
+                            <a onclick="showInPopup('@Url.Action("Create","Departs",null,Context.Request.Scheme)','اضافه قسم جدبد')" class="btn btn-success text-white" title="اضافه تحليل"><i class="fas fa-plus"></i> اضافه قسم جدبد</a>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">Vertically Centered</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>هل انت متاكد انك تريد حذف هاذا</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Departs/DeleteConfirmed",
+            data: { id: empId },
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+           error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>
+
+

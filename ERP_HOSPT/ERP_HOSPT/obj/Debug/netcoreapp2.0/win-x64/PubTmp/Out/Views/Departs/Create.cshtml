@@ -1,0 +1,30 @@
+﻿@model ERP_HOSPT.Data.Depart
+
+@{
+    Layout = null;
+}
+
+
+<div class="card">
+    <div class="card-body">
+        <form asp-action="Create" asp-route-id="@Model.Departno" onsubmit="return jQueryAjaxPost(this);">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="dept_name" class="control-label"></label>
+                <input asp-for="dept_name" class="form-control" />
+                <span asp-validation-for="dept_name" class="text-danger"></span>
+            </div>
+
+            <br />
+
+            <div class="text-center">
+
+
+                <button type="submit" class="btn btn-primary col-3"> <i class="bi bi-send"></i> ارسال</button>
+
+                <button type="reset" class="btn btn-primary col-3"> <i class="bi bi-arrow-repeat me-1"></i> تحديث</button>
+            </div>
+        </form>
+    </div>
+</div>
+

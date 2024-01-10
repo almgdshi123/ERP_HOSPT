@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.Region>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+<div id="view-all">
+    @await Html.PartialAsync("_ViewAllRegions", Model)
+</div>
+
+@section Scripts{
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

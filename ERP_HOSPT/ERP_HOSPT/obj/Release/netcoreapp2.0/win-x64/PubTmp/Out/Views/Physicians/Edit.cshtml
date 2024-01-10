@@ -1,0 +1,88 @@
+﻿@model ERP_HOSPT.Data.Physician
+@{ Layout = null;
+}
+<div class="card">
+    <div class="card-body">
+        <form class="row g-3" asp-action="Edit" asp-route-id="@Model.PhysicianId" onsubmit="return jQueryAjaxPost(this);">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PhysicianId" />
+
+            <div class="col-md-12">
+                <label asp-for="phy_name" class="control-label"></label>
+                <input asp-for="phy_name" class="form-control" />
+                <span asp-validation-for="phy_name" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="phy_birth" class="control-label"></label>
+                <input type="date" asp-for="phy_birth" class="form-control" />
+                <span asp-validation-for="phy_birth" class="text-danger"></span>
+            </div>
+
+            <div class="col-md-6">
+                <label asp-for="phy_sex" class="control-label"></label>
+                <select asp-for="phy_sex" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+
+                    <option value="ذكر">ذكر</option>
+                    <option value="انثئ">انثئ</option>
+                    <option value="شي اخر">شي اخر</option>
+                </select>
+
+            </div>
+            <div class="col-md-12">
+                <label asp-for="phy_addr" class="control-label"></label>
+                <input asp-for="phy_addr" class="form-control" />
+                <span asp-validation-for="phy_addr" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="phy_phone" class="control-label"></label>
+                <input type="number" asp-for="phy_phone" class="form-control" />
+                <span asp-validation-for="phy_phone" class="text-danger"></span>
+            </div>
+            <div class="col-md-6">
+                <label asp-for="phy_emil" class="control-label"></label>
+                <input type="email" asp-for="phy_emil" class="form-control" />
+                <span asp-validation-for="phy_emil" class="text-danger"></span>
+            </div>
+            <div class="col-md-12">
+                <label asp-for="RegionId" class="control-label"></label>
+                <select asp-for="RegionId" class="form-select" asp-items="ViewBag.RegionId"></select>
+                <span asp-validation-for="RegionId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="QualifyId" class="control-label"></label>
+                <select asp-for="QualifyId" class="form-select" asp-items="ViewBag.QualifyId"></select>
+                <span asp-validation-for="QualifyId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="cityId" class="control-label"></label>
+                <select asp-for="cityId" class="form-select" asp-items="ViewBag.cityId"></select>
+                <span asp-validation-for="cityId" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="Departno" class="control-label"></label>
+                <select asp-for="Departno" class="form-select" asp-items="ViewBag.Departno"></select>
+                <span asp-validation-for="Departno" class="text-danger"></span>
+            </div>
+            <div class="col-md-4">
+                <label asp-for="userId" class="control-label"></label>
+                <select asp-for="userId" class="form-select" asp-items="ViewBag.userId"></select>
+                <span asp-validation-for="userId" class="text-danger"></span>
+            </div>
+            <div class="text-center">
+
+
+                <button type="submit" class="btn btn-primary col-3"> <i class="bi bi-save"></i> حفط</button>
+
+                <button type="reset" class="btn btn-primary col-3"> <i class="bi bi-arrow-repeat me-1"></i> تحديث</button>
+            </div>
+        </form><!-- End No Labels Form -->
+
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

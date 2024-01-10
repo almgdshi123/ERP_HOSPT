@@ -1,0 +1,175 @@
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\issa\Source\Repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\source\repos\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+D:\المقدشي\مشروع المقدشي\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\issa\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\مجلد جديد (2)\مجلد جديد\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Elite\Desktop\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+H:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+H:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+G:\publish\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+G:\publish\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csprojAssemblyReference.cache
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Demo\Documents\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\key.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.deps.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.runtimeconfig.dev.json
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfoInputs.cache
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.AssemblyInfo.cs
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.dll
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.pdb
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\bin\Debug\netcoreapp2.0\web.config
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csproj.AssemblyReference.cache
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.csproj.CoreCompileInputs.cache
+C:\Users\Demo\Documents\New folder\ERP_HOSPT\ERP_HOSPT\obj\Debug\netcoreapp2.0\ERP_HOSPT.genruntimeconfig.cache

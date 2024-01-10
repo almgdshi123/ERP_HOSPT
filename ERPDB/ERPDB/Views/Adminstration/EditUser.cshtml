@@ -1,0 +1,153 @@
+﻿@model EditUserViewModel
+
+@{
+    ViewBag.Title = "Edit User";
+}
+
+
+
+<div class="col-md-7">
+
+    <div class="card">
+
+
+
+
+        <div class="card-body">
+
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h6 class="text-white text-capitalize ps-3" style="text-align:center;">تعديل حساب المستخدم</h6>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" class="multisteps-form__form" style="height: 200px;">
+
+                            <div class="row">
+
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" asp-for="Id">رقم المستخدم </label>
+                                    <div class="input-group input-group-dynamic">
+
+                                        <input asp-for="Id" class="form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)" disabled>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <div class="col-12 col-sm-6">
+                                    <label class="form-label" asp-for="Email"> البريد الكتروني </label>
+                                    <div class="input-group input-group-dynamic">
+
+                                        <input asp-for="Email" class="multisteps-form__input form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-6">
+                                <label class="form-label" asp-for="UserName"> اسم المستخدم</label>
+                                <div class="input-group input-group-dynamic">
+
+                                    <input asp-for="UserName" class="multisteps-form__input form-control" type="text" onfocus="focused(this)" onfocusout="defocused(this)">
+                                </div>
+                            </div>
+
+
+
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <div class="form-group row">
+                                <div class="col-sm-10">
+
+                                    <a asp-action="ListUsers" class="btn btn-secondary rounded-pill  col-3">الغاء الامر</a>
+                                    <button type="submit" class="btn btn-success rounded-pill col-3">تعديل</button>
+
+                                </div>
+                            </div>
+                            <br />
+
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <br />
+
+            <br />
+
+            <div class="col-md-12">
+                <div class="card" style="height: 180px;">
+
+
+
+                    <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                        <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                            <h6 class="text-white text-capitalize ps-3" style="text-align:center;">الصلاحيات المستخدمه لهذا الحساب</h6>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="card-body" style="height: 180px;">
+                        @if (Model.Roles.Any())
+                        {
+                            foreach (var role in Model.Roles)
+                            {
+                                <h5 class="card-title">@role</h5>
+                            }
+                        }
+                        else
+                        {
+                            <h5 class="card-title">None at the moment</h5>
+                        }
+
+
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <a asp-action="ManageUserRoles" asp-route-userId="@Model.Id" class="btn btn-primary rounded-pill col-3">
+                                    اضافه
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+    @*<div class="card mt-3" style="width:80%;">
+            <div class="card-header" style="background-color:#4154f1;color:white;">
+                <h3>مطليبات المسخدم</h3>
+            </div>
+            <div class="card-body">
+                @if (Model.Claims.Any())
+                {
+                    foreach (var claim in Model.Claims)
+                    {
+                        <h5 class="card-title">@claim</h5>
+                    }
+                }
+                else
+                {
+                    <h5 class="card-title">None at the moment</h5>
+                }
+            </div>
+            <div class="card-footer">
+                <a asp-action="ManageUserClaims" asp-route-userId="@Model.Id"
+                   style="width:auto" class="btn btn-primary rounded-pill">
+                    Manage Claims
+                </a>
+            </div>
+        </div>*@

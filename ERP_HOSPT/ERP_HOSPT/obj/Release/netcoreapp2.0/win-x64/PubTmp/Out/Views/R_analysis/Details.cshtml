@@ -1,0 +1,60 @@
+﻿@model ERP_HOSPT.Data.R_analysis
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>R_analysis</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.r_date)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.r_date)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.r_result)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.r_result)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.r_describe)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.r_describe)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.analysis)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.analysis.AnalysisId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.interviews)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.interviews.interviewId)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.patient)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.patient.Patientname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.physician)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.physician.phy_addr)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.R_analysisId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

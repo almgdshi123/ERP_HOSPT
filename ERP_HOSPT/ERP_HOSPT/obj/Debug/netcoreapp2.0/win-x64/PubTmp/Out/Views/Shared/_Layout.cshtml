@@ -1,0 +1,804 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@using ERP_HOSPT.Models
+@using Microsoft.AspNetCore.Http;
+
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نظام اداره المستشفئ </title>
+
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    @*<environment include="Development">
+            <link href="~/c/assets/css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+            <link rel="stylesheet" href="~/css/site.css" />
+            <link href="~/c/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+            <link href="~/c/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+        </environment>
+        <environment exclude="Development">
+            <link href="https://fonts.gstatic.com" rel="preconnect">
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+                  asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+                  asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        </environment>*@
+
+
+    <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    <link href="~/c/assets/img/favicon.png" rel="icon">
+    <link href="~/c/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="~/c/assets/img/png-transparentl.png" rel="icon">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/c/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/c/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/c/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/c/assets/vendor/quill/quill.snow.css" rel="stylesheet">
+    <link href="~/c/assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+    <link href="~/c/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    @*<link href="~/Content/css/font-awesome.min.css" rel="stylesheet">*@
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="~/c/assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+
+
+    <!-- Template Main CSS File -->
+    <link href="~/c/assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+    * Template Name: NiceAdmin - v2.2.2
+    * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+    * Author: BootstrapMade.com
+    * License: https://bootstrapmade.com/license/
+    ======================================================== -->
+    <link href="~/sweetalart/sweetalert2.css" rel="stylesheet" />
+    <script src="~/sweetalart/sweetalert2.all.js"></script>
+
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top d-flex align-items-center" dir="rtl">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <a class="logo d-flex align-items-center">
+                <img src="~/c/assets/img/logo.png" alt="">
+                <span class="d-none d-lg-block">@Context.Session.GetString("Compan_name")</span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div><!-- End Logo -->
+
+        <!-- End Search Bar -->
+
+        <nav class="header-nav ms-auto" style="padding-right:1000px;">
+            <ul class="d-flex align-items-center">
+
+                <li class="nav-item dropdown pe-3">
+
+                    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+                        <span class="d-none d-md-block dropdown-toggle ps-2"> @UserManager.GetUserName(User)</span>
+                        <img src="~/c/assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+
+                    </a><!-- End Profile Iamge Icon -->
+
+                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+                        <li class="dropdown-header">
+                            <h2>@UserManager.GetUserName(User)</h2>
+
+
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                                <i class="bi bi-person"></i>
+                                <span>  حسابي    </span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" asp-controller="Manage" asp-action="Index">
+                                <i class="bi bi-gear"></i>
+                                <span>اعدادات حسابك</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                                <i class="bi bi-question-circle"></i>
+                                <span>تحتاج مساعده?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        @if (SignInManager.IsSignedIn(User))
+                        {
+
+                            <li>
+                                <a class="dropdown-item d-flex align-items-center" href="/Account/Login">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    <span>تسجيل الخروج</span>
+                                </a>
+                            </li>
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ul><!-- End Profile Dropdown Items -->
+                </li><!-- End Profile Nav -->
+
+            </ul>
+        </nav><!-- End Icons Navigation -->
+
+    </header><!-- End Header -->
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
+
+        <ul class="sidebar-nav" id="sidebar-nav">
+
+            <li class="nav-item">
+                <a class="nav-link " href="/Home/About">
+                    <i class="bi bi-grid"></i>
+                    <span>لوحه التحكم</span>
+                </a>
+            </li><!-- End Dashboard Nav -->
+
+            <li class="nav-heading">Pages</li>
+
+            @*صيدلي*@
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("صيدلي"))
+
+            {
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fas fa-capsules" style="color:#4154f1"></i><span>الصيدليه</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li dir="rtl">
+                            <a href="/Drugs/Create">
+                                <i class="bi bi-circle ms-3"></i><span>اضافه دواء</span>
+                            </a>
+                        </li>
+                        <li dir="rtl">
+                            <a href="/Drugs/Index">
+                                <i class="bi bi-circle ms-3"></i><span>عرض</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Tables Nav -->
+
+
+            }
+
+
+
+
+
+
+
+
+
+            @*دكتور*@
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("دكتور"))
+
+            {
+
+
+
+
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-xl fa-user color-teal" style="color:#4154f1"></i><span>السجل الصحي</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav notifications">
+                        @*<li dir="rtl">
+                        <a href="/Patients/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضاف مريض</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a class="notification-item" href="/Patients/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات المريض</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li><!-- End Components Nav -->
+
+                //اضافه وصفات الطبية
+
+
+                @*<li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#Prescribtion-nav" data-bs-toggle="collapse" href="#">
+                    <i class='fas fa-prescription-bottle-alt' style="color:#4154f1;"></i><span> الوصفات الطبية</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="Prescribtion-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+                    <li dir="rtl">
+                        <a href="/Prescribtions/Index">
+                            <i class="bi bi-circle ms-3"></i><span>  عرض النتائج وصفات الطبية</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@
+
+
+
+                //اضافه تحاليل المرضى
+
+                @*<li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#R_analysi-nav" data-bs-toggle="collapse" href="#">
+                    <i class="fa fa-thermometer-quarter" style="color:#4154f1;" aria-hidden="true"></i><span>فحوصات المرضى + النتائج.</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="R_analysi-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+                    <li dir="rtl">
+                        <a href="/R_analysis/Create">
+                            <i class="bi bi-circle ms-3"></i><span> اضافه فحص جديد </span>
+                        </a>
+                    </li>
+                    <li dir="rtl">
+                        <a href="/R_analysis/Index">
+                            <i class="bi bi-circle ms-3"></i><span>عرض النتائج </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>*@
+                //اضافه مقابله
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#interview-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-stethoscope " style="color:#4154f1;" aria-hidden="true"></i><span>المقابلات</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="interview-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li>
+                        <a href="/interviews/Create">
+                            <i class="bi bi-circle"></i><span>اضافه مقابله</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/interviews/Index">
+                                <i class="bi bi-circle ms-3"></i><span>  عرض النتائج المقابله</span>
+
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Tables Nav -->
+
+
+
+
+            }
+
+
+
+
+
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("المختبرات"))
+
+            {
+
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#R_analysis-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-microscope" style="color:#4154f1;" aria-hidden="true"></i><span>الفحوصات</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="R_analysis-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav notifications">
+                        <li dir="rtl">
+                            <a href="/R_analysis/Index">
+                                <i class="bi bi-circle ms-3"></i><span>عرض  الفحوصات</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li><!-- End Components Nav -->
+            }
+
+
+            @*المسجل عام*@
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("المسجل عام"))
+
+            {
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-xl fa-user color-teal" style="color:#4154f1"></i><span>المريض</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav notifications">
+                        @*<li dir="rtl">
+                        <a href="/Patients/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضاف مريض</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a class="notification-item" href="/Patients/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات المريض</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li><!-- End Components Nav -->
+
+
+
+                //اضافه دكتور
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#interview-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-stethoscope " style="color:#4154f1;" aria-hidden="true"></i><span>المقابلات</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="interview-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/interviews/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه مقابله</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/interviews/Index">
+                                <i class="bi bi-circle ms-3"></i><span>  بيانات المقابله</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li><!-- End Tables Nav -->
+
+
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+           
+
+            @*Admin*@
+            @if (SignInManager.IsSignedIn(User) && User.IsInRole("Admin"))
+
+            {
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#User-nav" data-bs-toggle="collapse" href="#">
+                        <i class='fas fa-users-cog ' style="color:#4154f1"></i><span>اداره المستخدمين</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="User-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li dir="rtl">
+                            <a class="nav-link" href="/Account/Register">
+                                <i class="bi bi-circle ms-3"></i><span>  اضافه مستخدم</span>
+                            </a>
+                        </li>
+                        <li dir="rtl">
+                            <a class="nav-link" href="/Adminstration/ListUsers">
+                                <i class="bi bi-circle ms-3"></i><span> عرض بيانات المستخدمين</span>
+                            </a>
+                        </li>
+                        <li dir="rtl">
+                            <a class="nav-link" href="/Adminstration/CreateRole">
+                                <i class="bi bi-circle ms-3"></i><span>  اضافه الصلاحيات</span>
+                            </a>
+                        </li>
+                        <li dir="rtl">
+                            <a class="nav-link" href="/Adminstration/ListRoles">
+                                <i class="bi bi-circle ms-3"></i><span> عرض بيانات الصلاحيات</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                //اضافه منطقه جديده
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Region-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-house-fill" style="color:#4154f1"></i><span>المنطقه</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Region-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/Regions/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه منطقه جديده</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/Regions/Index">
+                                <i class="bi bi-circle ms-3"></i><span>عرض بيانات المنطقه</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                //اضافه دكتور
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-xl fa-user-md " style="color:#4154f1"></i><span>الطبيب</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/Physicians/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه دكتور</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/Physicians/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات الطبيب</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li><!-- End Forms Nav -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Analyse-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fas fa-microscope" style="color:#4154f1;" aria-hidden="true"></i><span>التحاليل</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Analyse-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+                        <li dir="rtl">
+                            <a href="/Analyses/Index">
+                                <i class="bi bi-circle ms-3"></i><span>  عرض التحاليل  </span>
+                            </a>
+                        </li>
+
+
+
+                    </ul>
+                </li>
+                //اداره حسابك
+
+                //اضافه مدينه
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Cities-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-building" style="color:#4154f1"></i><span>المدن</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Cities-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/Cities/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه مدينه</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/Cities/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات المدينه</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                //اضافه قسم جديد
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Depart-nav" data-bs-toggle="collapse" href="#">
+                        <i class="fa fa-xl fa-building " style="color:#4154f1"></i><span>الاقسام</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Depart-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/Departs/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه قسم جديد</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/Departs/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات القسم</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+                //اضافه مؤهل جديد
+                <li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#Qualifie-nav" data-bs-toggle="collapse" href="#">
+                        <i class='fas fa-user-graduate' style="color:#4154f1"></i><span>المؤهلات</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="Qualifie-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        @*<li dir="rtl">
+                        <a href="/Qualifies/Create">
+                            <i class="bi bi-circle ms-3"></i><span>اضافه مؤهل جديد</span>
+                        </a>
+                    </li>*@
+                        <li dir="rtl">
+                            <a href="/Qualifies/Index">
+                                <i class="bi bi-circle ms-3"></i><span>بيانات المؤهلات</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+
+
+
+            }
+
+
+
+
+            @*<li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
+                <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="charts-chartjs.html">
+                        <i class="bi bi-circle"></i><span>Chart.js</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-apexcharts.html">
+                        <i class="bi bi-circle"></i><span>ApexCharts</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="charts-echarts.html">
+                        <i class="bi bi-circle"></i><span>ECharts</span>
+                    </a>
+                </li>
+            </ul>
+        </li>*@<!-- End Charts Nav -->
+            @*<li class="nav-item">
+                    <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+                        <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
+                    </a>
+                    <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                        <li>
+                            <a href="icons-bootstrap.html">
+                                <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="icons-remix.html">
+                                <i class="bi bi-circle"></i><span>Remix Icons</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="icons-boxicons.html">
+                                <i class="bi bi-circle"></i><span>Boxicons</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li> End Icons Nav
+                 End Tables Nav -
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>Profile</span>
+            </a>
+        </li> End Profile Page Nav
+
+                <li class="nav-item">
+                    <a>
+
+                    </a>
+                    <a asp-area="" asp-controller="Manage" asp-action="Index" title="Manage" class="nav-link collapsed">
+                        <i class="bi bi-question-circle"></i>
+                        <span>اداره حسابك</span>
+                    </a>
+                </li> End F.A.Q Page Nav
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pages-contact.html">
+                        <i class="bi bi-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li> End Contact Page Nav
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="pages-register.html">
+                        <i class="bi bi-card-list"></i>
+                        <span>Register</span>
+                    </a>
+                </li> End Register Page Nav
+                <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-login.html">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    <span>Login</span>
+                </a>
+            </li> End Login Page Nav
+                <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-error-404.html">
+                    <i class="bi bi-dash-circle"></i>
+                    <span>Error 404</span>
+                </a>
+            </li> End Error 404 Page Nav
+                <li class="nav-item">
+                <a class="nav-link collapsed" href="pages-blank.html">
+                    <i class="bi bi-file-earmark"></i>
+                    <span>Blank</span>
+                </a>
+            </li> End Blank Page Nav*@
+
+        </ul>
+
+    </aside>
+    <main id="main" class="main">
+
+
+        <div class="container" dir="rtl">
+
+            @RenderBody()
+        </div>
+
+    </main>
+    <div class="modal fade" tabindex="-1" role="dialog" id="form-modal">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header " style=" background-color: #4154f1;
+        color:white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">Vertically Centered</h5>
+                </div>
+                <div class="modal-body">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header" style=" background-color: #4154f1; color:white;">
+                    <h5 class="modal-title" id="exampleModalLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+                <div class="modal-body">
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+
+    <script src="~/c/assets/vendor/apexcharts/apexcharts.min.js"></script>
+    <script src="~/c/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/c/assets/vendor/chart.js/chart.min.js"></script>
+    <script src="~/c/assets/vendor/echarts/echarts.min.js"></script>
+    <script src="~/c/assets/vendor/quill/quill.min.js"></script>
+    <script src="~/c/assets/vendor/simple-datatables/simple-datatables.js"></script>
+    <script src="~/c/assets/vendor/tinymce/tinymce.min.js"></script>
+    <script src="~/c/assets/vendor/php-email-form/validate.js"></script>
+
+
+    <script src="~/c/assets/js/main.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+            asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+            asp-fallback-test="window.jQuery"
+            crossorigin="anonymous"
+            integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+    </script>
+    <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+            asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+            asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+            crossorigin="anonymous"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+    </script>
+
+
+
+    <script>
+
+        var showInPopup = (url, title) => {
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: function (res) {
+                    $('#form-modal .modal-body').html(res);
+                    $('#form-modal .modal-title').html(title);
+                    $('#form-modal').modal('show');
+                }
+            })
+        }
+        var showInPopup1 = (url, title) => {
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: function (res) {
+                    $('#exampleModal .modal-body').html(res);
+                    $('#exampleModal .modal-title').html(title);
+                    $('#exampleModal').modal('show');
+                }
+            })
+        }
+
+        jQueryAjaxPost = form => {
+            try {
+                $.ajax({
+                    type: 'POST',
+                    url: form.action,
+                    data: new FormData(form),
+                    contentType: false,
+                    processData: false,
+                    success: function (res) {
+                        if (res.isValid) {
+                            $('#view-all').html(res.html);
+                            $('#form-modal .modal-body').html('');
+                            $('#form-modal .modal-title').html('');
+                            $('#form-modal').modal('hide');
+                        }
+                        else
+                            $('#form-modal .modal-body').html(res.html);
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+                //to prevent default form submit event
+                return false;
+            } catch (ex) {
+                console.log(ex)
+            }
+
+        }
+    </script>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,241 @@
+﻿@model IEnumerable<ERPDB.Models.Patient>
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+
+
+<div class="col-md-9">
+    <div class="card">
+
+        <div class="col-md-12">
+            <div class="card">
+
+
+
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                        <h6 class="text-white text-capitalize ps-3" style="text-align:center;">السجل الصحي</h6>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <br />
+                    <form class="multisteps-form__form" asp-action="index">
+
+                        <div class="multisteps-form__panel border-radius-xl bg-white js-active" data-animation="FadeIn">
+
+                            <div class="multisteps-form__content">
+                                <div class="row mt-3">
+
+
+                                    <div class="col-md-6">
+                                        <div class="input-group input-group-outline is-valid my-3">
+                                            <label class="form-label">بحث</label>
+                                            <input name="Patientname" type="text" class="form-control" id="inputText">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <br />
+                                <div class="row mb-5">
+                                    <div class="col-sm-2" scope="col" style="text-align: right;">
+
+                                        <h5 scope="col" style="text-align:right;">البحث بحسب </h5>
+
+                                        <div class="form-check form-switch">
+                                            <label class="form-check-label" for="flexSwitchCheckDefault" scope="col" style="text-align:right;">اسم المريض</label>
+                                            <input class="form-check-input" name="id" type="radio" id="flexSwitchCheckDefault" dir="rtl" value=1>
+
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" id="flexSwitchCheckChecked" name="PatientId" value="2">
+                                            <label class="form-check-label" for="flexSwitchCheckChecked">الرقم المريض</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" id="flexSwitchCheckDisabled" name="PatientId" value="3">
+                                            <label class="form-check-label" for="flexSwitchCheckDisabled">الموبايل</label>
+                                        </div>
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="radio" id="flexSwitchCheckCheckedDisabled" name="PatientId" value="4">
+                                            <label class="form-check-label" for="flexSwitchCheckCheckedDisabled">رقم الوطني</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" text-center">
+                                    <button type="submit" class="btn btn-primary active col-3">
+                                        <i class="fa fa-search"></i> بحث
+                                    </button>
+                                    <button type="reset" class="btn btn-secondary  active col-3">
+                                        <i class="fa fa-refresh fa-1x"></i>   تحديث
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+        <br />
+        <br />
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card my-4">
+                        <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                            <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <h6 class="text-white text-capitalize ps-3" style="text-align:center;">عرض بيانات السجل الصحي </h6>
+                            </div>
+                        </div>
+                        <div class="card-body px-0 pb-2">
+                            <div class="table-responsive p-0">
+                                <table class="table align-items-center mb-0">
+
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.Patientname)
+                                            </th>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.PaNat)
+                                            </th>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.PaAddr)
+                                            </th>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.PaJob)
+                                            </th>
+                                            <th scope="col" style="text-align: right;">
+                                                @Html.DisplayNameFor(model => model.PaData)
+                                            </th>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.PaSex)
+                                            </th>
+                                            <th scope="col" style="text-align:right;">
+                                                @Html.DisplayNameFor(model => model.PaMobile)
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr id="row_@item.PatientId">
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.Patientname)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaNat)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaAddr)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaJob)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaData)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaSex)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaMobile)
+                                                </td>
+
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PaNat)
+                                                </td>
+
+
+                                                <td>
+                                                    <div>
+                                                        <a onclick="showInPopup('@Url.Action("CreateInterview", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','اظافة مقابلة')" class=" btn btn-outline-warning">عرض السحلات >></a>
+
+                                                    </div>
+
+
+                                                </td>
+
+                                                <td>
+                                                    <div>
+                                                        <a onclick="showInPopup('@Url.Action("Edit", "Patients", new { id = item.PatientId }, Context.Request.Scheme)','تعديل')" title="هل تريد التعديل"><i class="fas fa-pen-alt" style="color:yellow"></i></a>
+
+                                                        <a onclick="ConfirmDelete(@item.PatientId)" title="هل تريد الحذف"><i class="fas fa-trash-alt" style="color:red"></i></a>
+
+
+
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+
+                                        }
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Patients/DeleteConfirmed",
+            data: { id: empId },
+
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+            error: function (response) {
+                alert(response.responseText);
+            }
+
+        })
+
+    }
+
+
+</script>

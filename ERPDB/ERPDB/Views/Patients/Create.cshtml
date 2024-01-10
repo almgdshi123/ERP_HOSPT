@@ -1,0 +1,84 @@
+﻿@model ERPDB.Models.Patient
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Patients/_ViewAllPatients.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Patient</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Patientname" class="control-label"></label>
+                <input asp-for="Patientname" class="form-control" />
+                <span asp-validation-for="Patientname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegionId" class="control-label"></label>
+                <select asp-for="RegionId" class ="form-control" asp-items="ViewBag.RegionId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CityId" class="control-label"></label>
+                <select asp-for="CityId" class ="form-control" asp-items="ViewBag.CityId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaAddr" class="control-label"></label>
+                <input asp-for="PaAddr" class="form-control" />
+                <span asp-validation-for="PaAddr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaData" class="control-label"></label>
+                <input asp-for="PaData" class="form-control" />
+                <span asp-validation-for="PaData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaEmail" class="control-label"></label>
+                <input asp-for="PaEmail" class="form-control" />
+                <span asp-validation-for="PaEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaJob" class="control-label"></label>
+                <input asp-for="PaJob" class="form-control" />
+                <span asp-validation-for="PaJob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaMobile" class="control-label"></label>
+                <input asp-for="PaMobile" class="form-control" />
+                <span asp-validation-for="PaMobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaNat" class="control-label"></label>
+                <input asp-for="PaNat" class="form-control" />
+                <span asp-validation-for="PaNat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaNote" class="control-label"></label>
+                <input asp-for="PaNote" class="form-control" />
+                <span asp-validation-for="PaNote" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaPhone" class="control-label"></label>
+                <input asp-for="PaPhone" class="form-control" />
+                <span asp-validation-for="PaPhone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PaSex" class="control-label"></label>
+                <input asp-for="PaSex" class="form-control" />
+                <span asp-validation-for="PaSex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

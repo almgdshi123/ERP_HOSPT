@@ -1,0 +1,16 @@
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\appsettings.Development.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\appsettings.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\bundleconfig.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\Properties\launchSettings.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\ERPDB.deps.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\ERPDB.runtimeconfig.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\ERPDB.runtimeconfig.dev.json
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\ERPDB.dll
+D:\5\ERPDB\ERPDB\bin\Release\netcoreapp2.0\win-x64\ERPDB.pdb
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\UserSecretsAssemblyInfo.cs
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.AssemblyInfoInputs.cache
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.AssemblyInfo.cs
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.dll
+D:\5\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.pdb
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.dll
+C:\Users\Demo\Documents\New folder\ERPDB\ERPDB\obj\Release\netcoreapp2.0\win-x64\ERPDB.pdb

@@ -1,0 +1,82 @@
+﻿@model EditRoleViewModel
+
+@{
+    ViewBag.Title = "Edit Role";
+}
+<div class="col-md-8">
+    <div class="card" style="margin:0px 51px 0px 0px">
+
+        <div class="card-body">
+            <br />
+            <div class="card-header" style="background-color:#4154f1;color:white;">
+                <h3 style="text-align:center;
+color:white;">
+                    تعديل الصلاحيه
+                </h3>
+            </div>
+           
+
+
+            <form method="post">
+                <div class="form-group row">
+                    <label asp-for="Id" col-form-label"> رقم الصلاحيه</label>
+                    <div class="col-sm-10">
+                        <input asp-for="Id" disabled class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label asp-for="RoleName" col-form-label"> اسم الصلاحيه</label>
+                    <div class="col-sm-10">
+                        <input asp-for="RoleName" class="form-control">
+                        <span asp-validation-for="RoleName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+
+                <div class="text-center">
+                    <a asp-action="ListRoles" class="btn btn-danger col-2">الغاء</a>
+                    <button type="submit" class="btn btn-primary col-2">تعديل</button>
+
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+<br />
+<br />
+<div class="col-md-8">
+    <div class="card" style="        margin: 0px 51px 0px 0px">
+
+        <div class="card-body">
+            <div class="card-header" style="background-color:#4154f1;color:white;">
+
+                <h3 style="text-align:center;
+color:white;">
+                    الصلاحيه المستخدمه لهذا الحساب
+                </h3>
+            </div>
+            <div class="card-body">
+                @if (Model.Users.Any())
+                {
+                    foreach (var user in Model.Users)
+                    {
+                        <h5 class="card-title">@user</h5>
+                    }
+                }
+                else
+                {
+                    <h5 class="card-title">None at the moment</h5>
+                }
+            </div>
+            <div class="text-center">
+                <a asp-action="EditUsersInRole" asp-controller="Adminstration"
+                   asp-route-roleId="@Model.Id" class="btn btn-primary col-3">اضافه صلاحيه</a>
+            </div>
+        </div>
+    </div>
+</div>

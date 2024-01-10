@@ -1,0 +1,184 @@
+﻿@model IEnumerable<ERP_HOSPT.Data.City>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<style>
+    .table-header {
+        background-color: #4154f1;
+        color: white;
+    }
+</style>
+
+
+<div class="pagetitle">
+    <h1>قائمه  المدن</h1>
+</div>
+
+<div>
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-8">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <table class="table table-hover datatable ">
+                            <thead>
+                                <tr class="table-header">
+                                    <th scope="col" style="text-align:right;">
+                                        @Html.DisplayNameFor(model => model.cit_name)
+                                    </th>
+                                    <th></th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr id="row_@item.cityId">
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.cit_name)
+                                        </td>
+
+                                        <td class="icon">
+                                            <a asp-action="Edit" asp-route-id="@item.cityId" title="Remove my profile image"><i class="fas fa-pencil-alt" style="color:yellow"></i></a>
+
+
+                                            @*<a asp-action="Details" asp-route-id="@item.cityId" title="Remove my profile image"><i class="bi bi-eye-fill" style="color:green"></i></a>*@
+                                            <a onclick="ConfirmDelete(@item.cityId)" @*class="btn btn-danger btn-sm"*@ title="Remove my profile image"><i class="fas fa-trash-alt" style="color:red"></i></a>
+
+                                        </td>
+
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <!-- End Table with stripped rows -->
+                        <p>
+
+                            <a onclick="showInPopup('@Url.Action("Create","Cities",null,Context.Request.Scheme)','اضافه مدينه')" class="btn btn-success text-white" title="اضافه مدينه"><i class="fas fa-plus"></i> اضافه مدينه جديد</a>
+
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div class="modal fade" tabindex="-1" role="dialog" id="EditRecord">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Record</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form method="post" asp-controller="Cities" asp-action="Edit">
+                    <div class="modal-body">
+
+                        <div class="form-group">
+                            <label>name:</label>
+                            <input type="text" class="form-control" name="Cit_name" id="cit_name" required readonly />
+                        </div>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="modal fade" id="myModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" dir="rtl">
+                <div class="modal-header" style=" background-color: #4154f1;
+        color: white;">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" dir="rtl">Vertically Centered</h5>
+                </div>
+                <div class="modal-body">
+                    <h4>هل انت متاكد انك تريد حذف هاذا</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">اغلاق</button>
+                    <button type="button" class="btn btn-danger" onclick="DeleteConfirmed()">حذف</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- End Vertically centered Modal-->
+
+
+
+
+
+
+
+    <input type="hidden" id="hiddenEmployeeId" />
+
+
+
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+    var ConfirmDelete = function (id) {
+
+        $("#hiddenEmployeeId").val(id);
+        $("#myModal").modal('show');
+
+
+
+
+    }
+
+    var DeleteConfirmed = function () {
+
+        $("#loaderDiv").show();
+
+        var empId = $("#hiddenEmployeeId").val();
+
+        $.ajax({
+
+            type: "POST",
+            url: "/Cities/DeleteConfirmed",
+            data: { id: empId },
+            success: function (rsul) {
+                $("#loaderDiv").hide();
+                $("#myModal").modal("hide");
+                $("#row_" + empId).remove();
+                Swal.fire('تم الحذف!',
+                    'You clicked the button!',
+                    'success')
+
+            },
+           error: function (response) {
+                 Swal.fire( 'لم يتم الحذف',
+      'Your imaginary file is safe :)',
+      'error')
+            }
+
+        })
+
+    }
+
+
+</script>

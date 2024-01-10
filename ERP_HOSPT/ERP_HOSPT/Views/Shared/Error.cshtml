@@ -1,0 +1,31 @@
+﻿@if (ViewBag.ErrorTitle == null)
+{
+  
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <h4 class="alert-heading">@ViewBag.ErrorTitle</h4>
+        <p>
+            حدث خطأ أثناء معالجة طلبك.
+            تم إخطار فريق الدعم ونعمل على الإصلاح
+        </p>
+        <hr>
+        <p class="mb-0"> يرجى الاتصال بنا على pragim@pragimtech.com</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+else
+{
+<div class="row" style="margin:135px 251px 0px 0px">
+    <div class="col-md-8">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading" style="text-align:center; color:red;">@ViewBag.ErrorTitle</h4>
+            <p>
+                @ViewBag.ErrorMessage
+            </p>
+            <hr>
+            <p class="mb-0"style="text-align:center;" > ثم حاول حذف الصلاحيه مره اخرئ</p>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+        }
+
